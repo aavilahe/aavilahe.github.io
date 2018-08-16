@@ -1,0 +1,116 @@
+* {
+  background-color: #fdf6e3;
+  color: #073642;
+}
+
+.min-only {
+  display: unset;
+}
+
+.max-only {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+header > * {
+  margin: 5px;
+}
+
+header img {
+  max-width: 50%;
+  border-radius: 50%;
+}
+
+.name-container {
+  border-style: solid none solid none;
+  width: 100%;
+}
+
+.name-container p {
+  font-family: helveticaneue-light, "helvetica neue light", helvetica,
+               "arial narrow", arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+p.name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+p.jobtitle {
+}
+
+ul.inline-list {
+  list-style: none;
+  display: flex;
+  padding-inline: 2em;
+  justify-content: space-around;
+  font-size: 2em;
+}
+
+i.fab, i.fas, i.ai {
+  padding-inline: 0.1em;
+  color: #586e75;
+}
+
+article {
+  font-family: garamond, georgia, serif;
+  border-left: solid 0.5ex #586e75;
+  padding: 2em;
+  background-color: #eee8d5;
+  flex: 1 0 60ex;
+}
+
+article :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 400;
+  font-family: helveticaneue-light, "helvetica neue light", helvetica,
+               "arial narrow", arial, sans-serif;
+}
+
+article .mono {
+  font-family: "courier new", courier, monospace;
+}
+
+article * {
+  background-color: inherit;
+}
+
+@media only screen and (min-width: 600px){
+  .max-only {
+    display: inherit;
+
+  }
+
+  .min-only {
+    display: none;
+
+  }
+
+  body {
+    flex-flow: row nowrap;
+  }
+
+  header {
+    flex: 0 5 60ex;
+  }
+
+  article {
+    flex: 0 1 60ex;
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
